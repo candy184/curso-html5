@@ -32,9 +32,9 @@ Por último, el texto menciona que el libro está disponible en varios formatos,
 <!Doctype html>
 <html lang="en">
   <head>
-    <title> HTML5: Up and Running </title>
+    <title>HTML5: Up and Running</title>
   </head>
   <body>
-    <h1> Capitulo 1 </h1>
+    <h1>Capitulo 1</h1>
   </body>
 </html>
