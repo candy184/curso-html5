@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Canvas</title>
+  <style>
+    canvas { border: 1px dashed black; }
+  </style>
+</head>
+<body>
+  <h1>Canvas en HTML5</h1>
+  <canvas id="myCanvas" width="300" height="225"></canvas>
+
+  <script>
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    context.fillStyle = 'blue';
+    context.fillRect(50, 50, 150, 100);
+  </script>
+</body>
+</html>
