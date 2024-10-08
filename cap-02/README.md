@@ -14,58 +14,31 @@ A lo largo de todo el texto, se hace evidente que el avance de la web ha sido un
 
 ### Características importantes:
 
-1. Nuevos elementos semánticos
-HTML5 incluye etiquetas que mejoran la estructura y semántica de las páginas web. Estos elementos hacen que el código sea más legible y accesible, tanto para desarrolladores como para motores de búsqueda:
+1. Lenguaje de marcado: HTML utiliza etiquetas (tags) para definir la estructura y el contenido de una página web. Estas etiquetas indican al navegador cómo presentar y estructurar la información.
 
-<header>:
-<footer>:
-<article>:para
-<section>:para
-<nav>:
-<aside>:para
-2. Soporte para audio y vídeo nativos
-HTML5 facilita la integración de medios multimedia sin la necesidad de complementos externos (como Flash). Los nuevos elementos:
 
-<audio>: para reproducir archivos de audio.
-<video>: para mostrar el contenido del vídeo.
-Esto
+2. Estructura jerárquica: Las etiquetas se organizan en un árbol jerárquico (DOM, Document Object Model), con elementos anidados que permiten crear estructuras complejas.
 
-3. Lienzo
-La etiqueta<canvas>permite
 
-4. Soporte para gráficos vectoriales SVG y MathML
-HTML5 incluye soporte para gráficos vectoriales escalables (SVG) y MathML para la representación de fórmulas matemáticas. Esto facilita la incorporación de gráficos y contenido matemático en la web sin necesidad de imágenes.
+3. Interoperabilidad: HTML es compatible con todos los navegadores modernos, lo que permite que las páginas web creadas con HTML se vean de manera similar en diferentes dispositivos y plataformas.
 
-5. Nuevos tipos de entrada en formularios
-HTML5 mejoró significativamente los formularios web al agregar nuevos tipos de entrada para recoger datos de forma más específica:
 
-email, date, tel, range, color, url, search.
-Esto
+4. Semántica: HTML5 introdujo etiquetas semánticas como <header>, <article>, <footer>, etc., que proporcionan más significado al contenido y mejoran la accesibilidad y el SEO (optimización para motores de búsqueda).
 
-6. Almacenamiento web (Almacenamiento web)
-HTML5 ofrece dos mecanismos para el almacenamiento local de datos:
 
-Almacenamiento local: permite almacenar grandes cantidades de datos localmente en el navegador, sin fecha de expiración.
-Almacenamiento de sesiones: los datos se almacenan solo durante la sesión del navegador.
-Esto
+5. Soporte multimedia: HTML5 permite la integración nativa de contenido multimedia como video y audio a través de etiquetas como <video> y <audio>, sin necesidad de plugins externos.
 
-7. Geolocalización
-Estafa
 
-8. Soporte offline (caché de la aplicación)
-HTML5 introduce el concepto de "aplicaciones fuera de línea" a través de la API de caché de aplicación . lo
+6. Enlaces e hipervínculos: Permite crear enlaces a otras páginas web o recursos usando la etiqueta <a>, lo que facilita la navegación entre documentos.
 
-9. Trabajadores web
-Los trabajadores de la webPermitir ejecutar scripts
 
-10. WebSockets
-Los WebSockets permiten
+7. Atributos: Las etiquetas HTML pueden tener atributos (como id, class, src, alt, etc.) que añaden información adicional o especifican comportamientos.
 
-11. API de arrastrar y soltar (Arrastrar y soltar)
-HTML5 incluye la
 
-12. Mejora en el manejo de errores
-HTML
+8. Formularios: HTML ofrece una amplia gama de elementos de formulario (<input>, <textarea>, <button>, etc.) para interactuar con los usuarios y enviar datos a servidores.
 
-13. Compatibilidad con dispositivos móviles
-HTML
+
+9. Extensible con CSS y JavaScript: HTML por sí solo define la estructura del contenido, pero puede combinarse con CSS para definir el estilo y con JavaScript para agregar interactividad.
+
+
+10. Estandarizado: Está regulado por el W3C (World Wide Web Consortium) para asegurar que el lenguaje evolucione de manera coherente y funcional.
