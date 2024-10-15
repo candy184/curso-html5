@@ -1,4 +1,4 @@
-# Capítulo 2: ¿Como llegamos hasta aqui?
+# Capítulo 2: ¿Cómo llegamos hasta aqui?
 
 ## Resumen del capítulo
 
