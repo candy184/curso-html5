@@ -1,10 +1,10 @@
-Introducción al <canvas>
+# Introducción al `<canvas>` #
 El elemento <canvas> es como un lienzo en blanco en el que puedes dibujar utilizando JavaScript. No tiene contenido ni estilo propio (ni borde), pero puedes agregarlo manualmente en el código HTML. Aquí tienes un ejemplo básico de un lienzo:
 
 html
 <canvas width="300" height="225"></canvas>
 Para poder dibujar en el lienzo, debes acceder a su contexto de dibujo, que define las herramientas que usarás. El más común es el contexto "2D".
-
+g
 javascript
 var canvas = document.getElementById('a');
 var context = canvas.getContext('2d');
