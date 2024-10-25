@@ -2,9 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta 
-        name="viewport" 
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de Canvas en HTML5</title>
     <style>
         canvas {
@@ -14,32 +12,32 @@
 </head>
 <body>
 
-<h1>Canvas: Dibujar Formas Simples</h1>
-<canvas id="miCanvas" width="400" height="300"></canvas>
+    <h1>Canvas: Dibujar Formas Simples</h1>
+    <canvas id="miCanvas" width="400" height="300"></canvas>
 
-<script>
-    // Obtener el lienzo y su contexto de dibujo
-    var canvas = document.getElementById("miCanvas");
-    var ctx = canvas.getContext("2d");
+    <script>
+        // Obtener el lienzo y su contexto de dibujo
+        var canvas = document.getElementById("miCanvas");
+        var ctx = canvas.getContext("2d");
 
-    // Dibujar un rectángulo relleno
-    ctx.fillStyle = "#FF0000"; // Color de relleno: rojo
-    ctx.fillRect(50, 50, 100, 75); // Dibujar un rectángulo en (50,50) con ancho 100px y alto 75px
+        // Dibujar un rectángulo relleno
+        ctx.fillStyle = "#FF0000"; // Color de relleno: rojo
+        ctx.fillRect(50, 50, 100, 75); // Dibujar un rectángulo en (50,50) con ancho 100px y alto 75px
 
-    // Dibujar un círculo
-    ctx.beginPath();
-    ctx.arc(200, 100, 40, 0, 2 * Math.PI); // Dibujar un círculo en (200,100) con radio de 40px
-    ctx.fillStyle = "#00FF00"; // Color de relleno: verde
-    ctx.fill(); // Rellenar el círculo
+        // Dibujar un círculo
+        ctx.beginPath();
+        ctx.arc(200, 100, 40, 0, 2 * Math.PI); // Dibujar un círculo en (200,100) con radio de 40px
+        ctx.fillStyle = "#00FF00"; // Color de relleno: verde
+        ctx.fill(); // Rellenar el círculo
 
-    // Dibujar una línea
-    ctx.beginPath(); 
-    ctx.moveTo(300, 50); // Iniciar la línea en (300, 50)
-    ctx.lineTo(350, 150); // Terminar la línea en (350, 150)
-    ctx.strokeStyle = "#0000FF"; // Color de línea: azul
-    ctx.lineWidth = 5; // Grosor de la línea
-    ctx.stroke(); // Dibujar la línea
-</script>
+        // Dibujar una línea
+        ctx.beginPath(); 
+        ctx.moveTo(300, 50); // Iniciar la línea en (300, 50)
+        ctx.lineTo(350, 150); // Terminar la línea en (350, 150)
+        ctx.strokeStyle = "#0000FF"; // Color de línea: azul
+        ctx.lineWidth = 5; // Grosor de la línea
+        ctx.stroke(); // Dibujar la línea
+    </script>
 
 </body>
 </html>
