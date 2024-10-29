@@ -1,93 +1,98 @@
-# Introducción al `<canvas>` #
-El elemento <canvas> es como un lienzo en blanco en el que puedes dibujar utilizando JavaScript. No tiene contenido ni estilo propio (ni borde), pero puedes agregarlo manualmente en el código HTML. Aquí tienes un ejemplo básico de un lienzo:
+# Introducción al `<canvas>`
 
-## html ##
-`<canvas width="300" height="225"></canvas>`
-Para poder dibujar en el lienzo, debes acceder a su contexto de dibujo, que define las herramientas que usarás. El más común es el contexto "2D".
+El elemento `<canvas>` en HTML5 es un lienzo en blanco donde puedes dibujar utilizando JavaScript. No tiene contenido ni estilo propio (como bordes), pero puedes agregar estos manualmente en el código HTML.
 
-## javascript ##
-`var canvas = document.getElementById('a');`
+## Ejemplo Básico de un Lienzo
 
-`var context = canvas.getContext('2d');`
+Para crear un lienzo, puedes usar la siguiente estructura básica en HTML:
 
-### Dibujar Formas Simples ###
-Una de las primeras cosas que puedes hacer en un lienzo es dibujar un rectángulo. La función fillRect(x, y, width, height) dibuja un rectángulo relleno en la posición (x, y) con las dimensiones indicadas.
+```html
+<canvas id="a" width="300" height="225"></canvas>
+```
 
-### Ejemplo de código: ###
+Para dibujar en el lienzo, primero debes acceder a su contexto de dibujo, que define las herramientas disponibles. El contexto más común es el "2D".
 
-javascript
+### Acceso al Contexto de Dibujo
 
-`context.fillRect(50, 25, 150, 100);`
+```javascript
+var canvas = document.getElementById('a');
+var context = canvas.getContext('2d');
+```
 
-Este código dibuja un rectángulo negro en las coordenadas (50, 25) con un ancho de 150 píxeles y una altura de 100 píxeles.
+## Dibujar Formas Simples
 
-Coordenadas en el Lienzo
-El sistema de coordenadas del lienzo es una cuadrícula donde el punto (0, 0) está en la esquina superior izquierda. Las coordenadas aumentan hacia la derecha (eje X) y hacia abajo (eje Y). Esto es fundamental para posicionar los gráficos correctamente.
+Una de las primeras cosas que puedes hacer en un lienzo es dibujar un rectángulo. La función `fillRect(x, y, width, height)` dibuja un rectángulo relleno en la posición `(x, y)` con las dimensiones especificadas.
 
-Dibujar Líneas
-Para dibujar líneas, debes definir un camino o path usando los métodos moveTo(x, y) para mover el "lápiz" y lineTo(x, y) para dibujar la línea. Luego, para hacer visible el dibujo, se usa el método stroke().
+### Ejemplo de Código para Dibujar un Rectángulo
 
-### Ejemplo de código para dibujar una cuadrícula: ###
+```javascript
+context.fillRect(50, 25, 150, 100);
+```
 
-javascript
+Este código dibuja un rectángulo negro en las coordenadas `(50, 25)` con un ancho de 150 píxeles y una altura de 100 píxeles.
 
-`for (var x = 0.5; x < 500; x += 10) {`
- 
-  `context.moveTo(x, 0);`
- 
-  `context.lineTo(x, 375);`
+## Sistema de Coordenadas en el Lienzo
 
-`}`
+El sistema de coordenadas del lienzo es una cuadrícula donde el punto `(0, 0)` está en la esquina superior izquierda. Las coordenadas aumentan hacia la derecha en el eje X y hacia abajo en el eje Y, lo cual es fundamental para posicionar los gráficos correctamente.
 
-`context.strokeStyle = "#eee";`
+## Dibujar Líneas
 
-`context.stroke();`
+Para dibujar líneas, debes definir un camino o *path* utilizando `moveTo(x, y)` para mover el "lápiz" y `lineTo(x, y)` para dibujar la línea. Finalmente, se usa el método `stroke()` para hacer visible el dibujo.
 
-Este código dibuja una serie de líneas verticales para formar una cuadrícula de 10 píxeles de ancho.
+### Ejemplo de Código para Dibujar una Cuadrícula
 
-Texto en el Lienzo
-También puedes dibujar texto en el lienzo utilizando el método fillText(). El tamaño, fuente y alineación del texto se pueden ajustar con las propiedades font, textAlign y textBaseline.
+```javascript
+context.strokeStyle = "#eee";
+for (var x = 0.5; x < 500; x += 10) {
+    context.moveTo(x, 0);
+    context.lineTo(x, 375);
+}
+context.stroke();
+```
 
-### Ejemplo de texto: ###
+Este código dibuja una serie de líneas verticales para formar una cuadrícula con un ancho de 10 píxeles.
 
-javascript
+## Texto en el Lienzo
 
-`context.font = "bold 12px sans-serif";`
+Es posible dibujar texto en el lienzo usando el método `fillText()`. El tamaño, fuente y alineación del texto se pueden ajustar con las propiedades `font`, `textAlign` y `textBaseline`.
 
-`context.fillText("Texto", 100, 100);`
+### Ejemplo de Código para Dibujar Texto
 
-Gradientes
-En lugar de usar colores sólidos, puedes llenar figuras con gradientes. Los gradientes son transiciones suaves entre colores y pueden ser lineales o radiales.
+```javascript
+context.font = "bold 12px sans-serif";
+context.fillText("Texto", 100, 100);
+```
 
-### Ejemplo de gradiente lineal: ###
+## Gradientes
 
-javascript
+En lugar de usar colores sólidos, se pueden aplicar gradientes. Los gradientes son transiciones suaves entre colores y pueden ser lineales o radiales.
 
-`var gradiente = context.createLinearGradient(0, 0, 300, 0);`
+### Ejemplo de Gradiente Lineal
 
-`gradiente.addColorStop(0, "black");`
+```javascript
+var gradiente = context.createLinearGradient(0, 0, 300, 0);
+gradiente.addColorStop(0, "black");
+gradiente.addColorStop(1, "white");
+context.fillStyle = gradiente;
+context.fillRect(0, 0, 300, 225);
+```
 
-`gradiente.addColorStop(1, "white");`
+Este código crea un rectángulo con un degradado de negro a blanco de izquierda a derecha.
 
-`context.fillStyle = gradiente;`
+## Trabajar con Imágenes
 
-`context.fillRect(0, 0, 300, 225);`
+El método `drawImage()` permite dibujar imágenes en el lienzo. Puedes utilizar imágenes existentes en la página o cargarlas mediante JavaScript. Además, este método permite escalarlas y recortarlas antes de dibujarlas.
 
-Este código crea un rectángulo con un degradado de negro a blanco que va de izquierda a derecha.
+### Ejemplo de Cómo Dibujar una Imagen
 
-## Trabajar con Imágenes ##
-
-El método drawImage() permite dibujar imágenes en el lienzo. Puedes usar imágenes existentes en la página o cargarlas mediante JavaScript. El método permite escalar y recortar la imagen antes de dibujarla.
-
-### Ejemplo de cómo dibujar una imagen: ###
-
-javascript
-
-`var img = new Image();`
-
-`img.src = 'ruta_a_la_imagen.jpg';`
+```javascript
+var img = new Image();
+img.src = 'ruta_a_la_imagen.jpg';
 img.onload = function() {
-  context.drawImage(img, 0, 0);
+    context.drawImage(img, 0, 0);
 };
-Compatibilidad con Navegadores
-No todos los navegadores soportan <canvas> de manera nativa (especialmente versiones antiguas de Internet Explorer). Para esos casos, existe una biblioteca llamada explorercanvas.js, que permite que Internet Explorer 7 y 8 interpreten el lienzo.
+```
+
+## Compatibilidad con Navegadores
+
+No todos los navegadores soportan `<canvas>` de manera nativa, especialmente las versiones antiguas de Internet Explorer. Para estos casos, se puede utilizar la biblioteca `explorercanvas.js`, que permite que Internet Explorer 7 y 8 interpreten el elemento `<canvas>`.
