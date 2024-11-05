@@ -42,4 +42,4 @@ HTML5 introduce el elemento `<video>`, permitiendo la integración directa de vi
   <source src="video.mp4" type="video/mp4">
   <source src="video.webm" type="video/webm">
   <source src="video.ogv" type="video/ogg">
-</video>
+</video> ```
