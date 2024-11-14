@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Video en HTML5</title>
+</head>
+<body>
+    <h1>Video en HTML5</h1>
+    <p>Este es un ejemplo de cómo insertar video en una página web usando HTML5 y diferentes formatos para asegurar compatibilidad en varios navegadores.</p>
+    
+    <!-- Ejemplo de Video en HTML5 -->
+    <video width="640" height="360" controls>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        <source src="video.ogv" type="video/ogg">
+        Tu navegador no soporta el elemento <code>video</code>.
+    </video>
+
+    <h2>Atributos Opcionales</h2>
+    <p>El siguiente video incluye los atributos <code>autoplay</code> y <code>loop</code> para que inicie automáticamente y se reproduzca en bucle.</p>
+
+    <video width="640" height="360" autoplay loop muted>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        <source src="video.ogv" type="video/ogg">
+        Tu navegador no soporta el elemento <code>video</code>.
+    </video>
+
+    <h2>Video con Controles Personalizados</h2>
+    <p>Para personalizar la reproducción del video, se puede usar JavaScript. Este ejemplo incluye botones para reproducir y pausar el video.</p>
+
+    <video id="customVideo" width="640" height="360" controls>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        <source src="video.ogv" type="video/ogg">
+        Tu navegador no soporta el elemento <code>video</code>.
+    </video>
+    <br>
+    <button onclick="document.getElementById('customVideo').play()">Reproducir</button>
+    <button onclick="document.getElementById('customVideo').pause()">Pausar</button>
+
+    <script>
+        // JavaScript para controlar el video personalizado
+        const video = document.getElementById('customVideo');
+        
+        video.addEventListener('play', () => {
+            console.log('El video está en reproducción');
+        });
+
+        video.addEventListener('pause', () => {
+            console.log('El video ha sido pausado');
+        });
+    </script>
+</body>
+</html>
