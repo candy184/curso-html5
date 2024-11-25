@@ -1,0 +1,10 @@
+CACHE MANIFEST
+# Archivo de manifiesto para almacenamiento sin conexión
+
+CACHE:
+index.html
+style.css
+logo.jpg
+
+NETWORK:
+*
