@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Microdatos</title>
+</head>
+<body>
+    <!-- Información de la persona -->
+    <section itemscope itemtype="http://data-vocabulary.org/Person">
+        <h1 itemprop="name">Juan Pérez</h1>
+        <p itemprop="title">Desarrollador Web</p>
+        <p>Trabaja en: <span itemprop="affiliation">Tech Solutions</span></p>
+    </section>
+
+    <!-- Información de la empresa -->
+    <section itemscope itemtype="http://data-vocabulary.org/Organization">
+        <h2 itemprop="name">Tech Solutions</h2>
+        <p itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+            Dirección: 
+            <span itemprop="street-address">456 Avenida Tecnología</span>, 
+            <span itemprop="locality">Ciudad Innovadora</span>, 
+            <span itemprop="region">PA</span>.
+        </p>
+        <p>Teléfono: <span itemprop="tel">123-456-7890</span></p>
+        <p><a itemprop="url" href="https://techsolutions.com">Sitio web</a></p>
+    </section>
+
+    <!-- Información del evento -->
+    <article itemscope itemtype="http://data-vocabulary.org/Event">
+        <h2 itemprop="summary">Conferencia: Innovación en HTML5</h2>
+        <p>
+            <time itemprop="startDate" datetime="2024-12-15T10:00">15 de diciembre de 2024, 10:00 AM</time>
+            -
+            <time itemprop="endDate" datetime="2024-12-15T14:00">2:00 PM</time>
+        </p>
+        <p itemprop="location" itemscope itemtype="http://data-vocabulary.org/Address">
+            Lugar: <span itemprop="name">Centro de Innovación</span>, 
+            <span itemprop="street-address">123 Calle Ejemplo</span>, 
+            <span itemprop="locality">Ciudad Creativa</span>, 
+            <span itemprop="region">PA</span>.
+        </p>
+    </article>
+</body>
+</html>
