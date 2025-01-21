@@ -7,38 +7,42 @@
 </head>
 <body>
     <!-- Información de la persona -->
-    <section itemscope itemtype="http://data-vocabulary.org/Person">
+    <section itemscope itemtype="https://schema.org/Person">
         <h1 itemprop="name">Juan Pérez</h1>
-        <p itemprop="title">Desarrollador Web</p>
-        <p>Trabaja en: <span itemprop="affiliation">Tech Solutions</span></p>
+        <p itemprop="jobTitle">Desarrollador Web</p>
+        <p>Trabaja en: <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+            <span itemprop="name">Tech Solutions</span>
+        </span></p>
     </section>
 
     <!-- Información de la empresa -->
-    <section itemscope itemtype="http://data-vocabulary.org/Organization">
+    <section itemscope itemtype="https://schema.org/Organization">
         <h2 itemprop="name">Tech Solutions</h2>
-        <p itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+        <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
             Dirección: 
-            <span itemprop="street-address">456 Avenida Tecnología</span>, 
-            <span itemprop="locality">Ciudad Innovadora</span>, 
-            <span itemprop="region">PA</span>.
+            <span itemprop="streetAddress">456 Avenida Tecnología</span>, 
+            <span itemprop="addressLocality">Ciudad Innovadora</span>, 
+            <span itemprop="addressRegion">PA</span>.
         </p>
-        <p>Teléfono: <span itemprop="tel">123-456-7890</span></p>
+        <p>Teléfono: <span itemprop="telephone">123-456-7890</span></p>
         <p><a itemprop="url" href="https://techsolutions.com">Sitio web</a></p>
     </section>
 
     <!-- Información del evento -->
-    <article itemscope itemtype="http://data-vocabulary.org/Event">
-        <h2 itemprop="summary">Conferencia: Innovación en HTML5</h2>
+    <article itemscope itemtype="https://schema.org/Event">
+        <h2 itemprop="name">Conferencia: Innovación en HTML5</h2>
         <p>
             <time itemprop="startDate" datetime="2024-12-15T10:00">15 de diciembre de 2024, 10:00 AM</time>
             -
             <time itemprop="endDate" datetime="2024-12-15T14:00">2:00 PM</time>
         </p>
-        <p itemprop="location" itemscope itemtype="http://data-vocabulary.org/Address">
+        <p itemprop="location" itemscope itemtype="https://schema.org/Place">
             Lugar: <span itemprop="name">Centro de Innovación</span>, 
-            <span itemprop="street-address">123 Calle Ejemplo</span>, 
-            <span itemprop="locality">Ciudad Creativa</span>, 
-            <span itemprop="region">PA</span>.
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="streetAddress">123 Calle Ejemplo</span>, 
+                <span itemprop="addressLocality">Ciudad Creativa</span>, 
+                <span itemprop="addressRegion">PA</span>.
+            </span>
         </p>
     </article>
 </body>
