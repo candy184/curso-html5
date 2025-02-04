@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Dinámica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    #gallery {
+      display: inline-block;
+      text-align: left;
+    }
+    .photonav {
+      margin-bottom: 10px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Galería Dinámica con API de Historial</h1>
+  <aside id="gallery">
+    <p class="photonav">
+      <a id="photonext" href="image2.html">Next ></a>
+      <a id="photoprev" href="image1.html"> < Previous</a>
+    </p>
+    <figure id="photo">
+      <img id="photoimg" src="image1.jpg" alt="Imagen 1">
+      <figcaption>Imagen 1</figcaption>
+    </figure>
+  </aside>
+  <script src="sscript.js"></script>
+</body>
+</html>
