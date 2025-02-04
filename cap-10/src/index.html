@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario HTML5</title>
+</head>
+<body>
+  <h1>Formulario de Ejemplo en HTML5</h1>
+
+  <!-- Paso 1: Declarar los campos del formulario -->
+  <form>
+    <!-- Campo de texto con marcador de posición y requerido -->
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
+    <br><br>
+
+    <!-- Paso 2: Campo de correo electrónico -->
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+    <br><br>
+
+    <!-- Paso 3: Campo de número con rango y valor predeterminado -->
+    <label for="numero">Número entre 1 y 10:</label>
+    <input type="number" id="numero" name="numero" min="1" max="10" step="1" value="5">
+    <br><br>
+
+    <!-- Paso 4: Selector de rango (slider) -->
+    <label for="satisfaccion">Nivel de satisfacción (1-10):</label>
+    <input type="range" id="satisfaccion" name="satisfaccion" min="1" max="10" step="1" value="5">
+    <br><br>
+
+    <!-- Paso 5: Selector de fecha -->
+    <label for="fecha">Fecha de nacimiento:</label>
+    <input type="date" id="fecha" name="fecha">
+    <br><br>
+
+    <!-- Paso 6: Botón de envío -->
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
